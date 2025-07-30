@@ -16,7 +16,7 @@ This repository is a personal collection of experiments, prototypes, and explora
 
 The experiments are created using Google Colab and organized by topic or project.
 
-- `LTN.ipnby`: an experiment with Logic Tensor Networks for Multi-Label Classification of movie-genres using PyTorch and ltntorch package.
+- `LTN.ipynb`: an experiment with Logic Tensor Networks for Multi-Label Classification of movie-genres using PyTorch and ltntorch package.
 
 ## ⚙️ Frameworks & Tools
 
