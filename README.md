@@ -17,6 +17,7 @@ This repository is a personal collection of experiments, prototypes, and explora
 Some of the experiments are created using Google Colab and organized by topic or project.
 
 - `movie-genre-prediction`: an experiment with Logic Tensor Networks for Multi-Label Classification of movie-genres using PyTorch and ltntorch package.
+- `facial-emotion-recognition`: an experiment with Vision Transformers to classify facial emotions in FER2013 face images dataset. 
 - `invoice-ocr`: simple code snippet showing how easy it is doing turkish-OCR using Baidu's PaddleOCR.
 
 ## ⚙️ Frameworks & Tools
