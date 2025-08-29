@@ -1,7 +1,7 @@
 # Complex-Valued Facial Emotion Recognition
 
 This project implements a **facial emotion recognition (FER) system** using **complex-valued neural networks**.  
-By leveraging complex representations, the model can better capture subtle facial features and temporal patterns in the data.
+By leveraging complex representations, the model can better capture subtle facial features and patterns in the data.
 
 ## Features
 
