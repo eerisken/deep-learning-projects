@@ -18,7 +18,8 @@ Some of the experiments are created using Google Colab and organized by topic or
 
 - **Shazam**: Shazam like Song Identifier using PyTorch and Qdrant Vector-Database (and using FMA-Small Song Dataset).
 - **movie-genre-prediction**: an experiment with Logic Tensor Networks for Multi-Label Classification of movie-genres using PyTorch and ltntorch package.
-- **facial-emotion-recognition**: an experiment with Vision Transformers to classify facial emotions in FER2013 face images dataset. 
+- **facial-emotion-recognition**: an experiment with Vision Transformers to classify facial emotions in FER2013 face images dataset.
+- **complex-valued-facial-emotion-recognition**: a project implements a facial emotion recognition (FER) system using complex-valued neural networks.
 - **invoice-ocr**: simple code snippet showing how easy it is doing turkish-OCR using Baidu's PaddleOCR.
 
 ## ⚙️ Frameworks & Tools
