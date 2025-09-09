@@ -1,6 +1,6 @@
 # Deep Learning Experiments
 
-Welcome to my Deep Learning Experiments repository!
+Welcome to my Deep Learning Projects Portfolio repository!
 
 This repository is a personal collection of experiments, prototypes, and explorations in the field of deep learning. It includes implementations using popular frameworks like **PyTorch** and **TensorFlow**, and covers a wide range of topics such as:
 
