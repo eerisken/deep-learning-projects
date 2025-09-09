@@ -1,4 +1,4 @@
-# Deep Learning Experiments
+# Deep Learning Projects Portfolio
 
 Welcome to my Deep Learning Projects Portfolio repository!
 
