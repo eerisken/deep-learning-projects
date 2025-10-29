@@ -1,5 +1,5 @@
 
-*Physics-Informed Neural Network for 1D Heat Equation*
+**Physics-Informed Neural Network for 1D Heat Equation**
 
 This Python code uses the PyTorch library to create and train a Physics-Informed Neural Network (PINN). The goal is to find an approximate solution to the 1D heat equation (ut​=αuxx​) over a specified time and space domain.
 
