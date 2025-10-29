@@ -11,7 +11,7 @@ Some of the experiments are created using Google Colab and organized by topic or
 - **Shazam**: Shazam like Song Identifier using PyTorch and Qdrant Vector-Database (and using FMA-Small Song Dataset).
 - **movie-genre-prediction**: an experiment with Logic Tensor Networks for Multi-Label Classification of movie-genres using PyTorch and ltntorch package.
 - **facial-emotion-recognition**: an experiment with Vision Transformers to classify facial emotions in FER2013 face images dataset.
-- **PINN**: Physiscs Informed Machine Learning experiment.
+- **PINN**: Physiscs Informed Deep Learning experiment.
 - **art-image-generator**: a fantasy art image generator via transfer-learning with stable-diffusion model.  
 - **invoice-ocr**: simple code snippet showing how easy it is doing turkish-OCR using Baidu's PaddleOCR.
 
