@@ -1,4 +1,4 @@
-\# 🕵️ Deepfake Detection & Forensics Toolkit
+# 🕵️ Deepfake Detection & Forensics Toolkit
 
 Markdown
 
