@@ -19,7 +19,7 @@ This project relies on PyTorch and Hugging Face Transformers. You can install al
 \#\#\# 1\. Requirements  
 Ensure you have Python 3.10+ installed.
 
-\`\`\`bash  
+```bash  
 \# Clone the repository  
 git clone \[https://github.com/yourusername/deepfake-detection.git\](https://github.com/yourusername/deepfake-detection.git)  
 cd deepfake-detection
@@ -27,6 +27,7 @@ cd deepfake-detection
 \# Create a virtual environment (Recommended)  
 python \-m venv venv  
 source venv/bin/activate  \# On Windows use: venv\\Scripts\\activate
+```
 
 ### **2\. Install Dependencies**
 
