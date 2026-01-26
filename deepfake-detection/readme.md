@@ -76,7 +76,7 @@ The script will generate a report in the terminal and save evidence clips:
 * **Score > 70%:** Highly Suspicious.  
 * **VISUAL_EVIDENCE_X.mp4:** The script extracts the specific seconds where the model detected glitches (blurring around the mouth, inconsistent noise) so you can review them manually.
 
-## **Things to consider**
+## ✅/❌ Things to consider
 
 ### 1. The "Evidence Contamination" Problem
 
@@ -119,16 +119,6 @@ ffmpeg -i input.mp4 -ss 00:01:30 -t 10 bad_evidence.mp4
 
 Use LosslessCut (or ffmpeg -c copy) to trim the video length. It preserves the artifacts detection models look for.
 Do NOT use Premiere, DaVinci Resolve, or online video cutters, as they almost always re-encode.
-
-## **📂 Project Structure**
-
-Plaintext
-
-.  
-├── detect-evidence.py       # Main forensic analysis script  
-├── detect_lipsync.py        # (Optional) Module for checking audio-visual sync  
-├── requirements.txt         # Dependency list  
-└── README.md                # Documentation
 
 ## **📜 License**
 
