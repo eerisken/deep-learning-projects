@@ -64,9 +64,9 @@ This toolkit combines multiple AI architectures to ensure robust detection. It d
 
 The main script processes a video file and outputs a "Fake Score" (0% to 100%).
 
-Bash
-
+```bash
 python detect-evidence.py --input path/to/video.mp4
+```
 
 ### **Output Interpretation**
 
@@ -75,6 +75,50 @@ The script will generate a report in the terminal and save evidence clips:
 * **Score < 40%:** Likely Real.  
 * **Score > 70%:** Highly Suspicious.  
 * **VISUAL_EVIDENCE_X.mp4:** The script extracts the specific seconds where the model detected glitches (blurring around the mouth, inconsistent noise) so you can review them manually.
+
+## **Things to consider**
+
+### 1. The "Evidence Contamination" Problem
+
+Deepfake detection models (like the ManTra-Net or ViT models we discussed) do not just look at the image content; they look at invisible compression artifacts (DCT coefficients, noise patterns).
+
+Standard Cutting (Bad): If you use a standard video editor or a basic ffmpeg command, it decodes the video and re-encodes it to save the new clip. This adds a second layer of compression ("Double Compression"). It washes away the subtle digital fingerprints of the deepfake, making detection much harder.
+
+LosslessCut / Stream Copy (Good): LosslessCut simply copies the data packets from the original video file to a new container without touching the pixel data. The digital evidence (including the deepfake artifacts) remains bit-for-bit identical to the original.
+
+### 2. The "Keyframe" Limitation (The Catch)
+
+There is one major downside to lossless cutting that you must know: Precision. Video compression relies on Keyframes (I-frames), which are full pictures, and P/B-frames, which only store changes.
+    
+    • LosslessCut can usually only cut strictly at a Keyframe.
+    • If you try to cut between keyframes, the player might show a few seconds of black screen or garbage pixels because it's missing the reference image.
+
+Recommendation: If you are cutting a clip to feed into detect-evidence.py, cut a few seconds earlier than you need to ensure you capture a valid Keyframe without breaking the stream.
+
+### 3. How to do it with FFmpeg (If you prefer CLI)
+
+LosslessCut is just a GUI for FFmpeg. You can achieve the exact same forensic-grade cut using the command line with the -c copy flag:
+
+### ✅ FORENSICALLY SAFE (No Re-encoding) 
+
+-ss : Start time # -t : Duration # -c copy : COPIES the video/audio streams exactly. No quality loss.
+
+```bash
+ffmpeg -i input.mp4 -ss 00:01:30 -t 10 -c copy evidence_clip.mp4
+```
+
+### ❌ FORENSICALLY BAD (Re-encodes) 
+
+This destroys deepfake artifacts by applying new compression. 
+
+```bash
+ffmpeg -i input.mp4 -ss 00:01:30 -t 10 bad_evidence.mp4
+```
+
+### Summary
+
+Use LosslessCut (or ffmpeg -c copy) to trim the video length. It preserves the artifacts detection models look for.
+Do NOT use Premiere, DaVinci Resolve, or online video cutters, as they almost always re-encode.
 
 ## **📂 Project Structure**
 
